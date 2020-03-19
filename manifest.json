@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "İlk eklentim",
+  "description": "Sizlere Benden bir Hello Word",
+  "version": "0.1",
+  "icons": { "16": "hello.png" ,
+    "48": "hello.png",
+   "128": "hello.png"},
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ], 
+      "js": ["jquery-1.11.1.min.js", "background.js"]
+    }
+  ],
+  
+  "browser_action": {
+    "default_icon": "hello.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions":[
+    "storage",
+    "contextMenus",
+    "notifications",
+    "tabs"
+  ]
+    
+  
+
+}
